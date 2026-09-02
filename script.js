@@ -8,7 +8,7 @@ const ctx = canvas.getContext("2d");
 canvas.width = 1920;
 canvas.height = 1080;
 
-const frameCount = 500;
+const frameCount = 569;
 const images = [];
 
 const playhead = { frame: 0 }; 
@@ -86,24 +86,24 @@ tl.to(playhead, {
 });
 
 // add dead space 2 end of tl to sticky longer
-tl.to({}, { duration: 0.1 });
+// tl.to({}, { duration: 0.1 }); // .10 = 10% of og duration
 
 
 
-// gsap.fromTo(".two", 
-//   { filter: "blur(20px)" }, 
-//   {
-//     filter: "blur(0px)",
-//     ease: "none",
-//     scrollTrigger: {
-//       trigger: ".two",
-//       start: "bottom bottom", 
-//       end: "+=500", // add fake scroll padding
-//       pin: ".two", // lock div
-//       scrub: true,
-//     }
-//   }
-// );
+gsap.fromTo(".two", 
+  { filter: "blur(20px)" }, 
+  {
+    filter: "blur(0px)",
+    ease: "none",
+    scrollTrigger: {
+      trigger: ".two",
+      start: "bottom bottom", 
+      end: "+=500", // add fake scroll padding
+      pin: ".two", // lock div
+      scrub: true,
+    }
+  }
+);
 
 
 

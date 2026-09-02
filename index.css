@@ -1,0 +1,66 @@
+ body, html {
+  margin: 0;
+  padding: 0;
+  background-color: #111;
+  color: white;
+  font-family: sans-serif;
+
+  min-height: 100vh;
+  /* display: flex; */
+  /* justify-content: center;
+  align-items: center;   */
+}
+
+
+.full-iteration{
+    height: 300vh; /* scene1 vh + scen2 vh */
+    width: 100%;
+    position: relative;
+    /* remove border later */
+    border-bottom: 10px solid #fff;
+}
+
+#one{
+    background-color: aqua;
+
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+#two{
+    background-color: blueviolet;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.one {
+      position: relative;
+      height: 200vh; /* n*vh, where n = full swipes to get thru. larger num = faster, smaller = slower */
+    }
+
+
+.two {
+      height: 100vh;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      font-size: 3rem;
+    }
+
+
+.canvas-wrapper {
+      width: 100%;
+      height: 100vh;
+      display: flex; justify-content: center; align-items: center;
+}
+
+canvas {
+      width: 80%; max-width: 800px; aspect-ratio: 16 / 9;
+}
+
+.overlays {
+      position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+      pointer-events: none;
+}

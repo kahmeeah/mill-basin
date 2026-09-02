@@ -5,12 +5,88 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>(Untitled)</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script src="script.js"></script>
+    
 
 </head>
 <body>
+
+    <!-- TODO
+
+    2 main divs
+    one is stickied via scrolltrig wtvs logic
+    after that scence ends, the second div is appended
+    - at this point u can still scroll up/in reverse
+    -if u scroll past div 2, a new div one + two is generated and appeneded to stack
+    -once new div 1 is stickied to canvas via gsap, remove the previous old vers of the divs from stack
+    -repeat    
+    -->
+
+
+
     
+    <!-- =========== main div, holds the current iteration of the scenes =========== -->
+    <main id="main"></main>
+
+    <!-- =========== template div, where js gets inserted into =========== -->
+    <template id="template">
+
+        <!-- one full interation block -->
+        <div class="full-iteration">
+
+
+
+
+            <!-- =========== SCENE ONE =========== -->
+            <div class="one">
+                <!-- for the video -->
+                <div class="canvas-wrapper">
+                <canvas></canvas> 
+                </div>
+
+                <!-- for any text going over da vid -->
+                <div class="overlays">
+                <p>hi</p>
+                </div>
+            </div>
+
+
+
+            <!-- =========== SCENE TWO =========== -->
+            <div class="two">
+                <h1>SCENE 2</h1>
+                <p>hiiiaiaiaaiii</p>
+            </div>
+
+
+        </div>
+       
+
+
+    </template>
+
+
+    <!-- 
+
+    <div >
+        <canvas id="one" width="200" height="100">hi</canvas>
+    
+    </div>
+
+
+     <div >
+        <canvas id="two">hi</canvas>
+     </div>         -->
+
+
+
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="main.js"></script>
+    <script src="decay.js"></script>
 </body>
 </html>
